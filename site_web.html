@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+  <html lang="fr">
+    <head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MarigeMathildeetAdrien</title>
+        <!-- Inclure la biblioth??que Leaflet -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+          <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            
+            <style>
+            #map { height: 400px; }
+            body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f8f4e6; /* Couleur bl?? */;
+                color: #973909;
+                
+            }
+          
+          .top-banner {
+            background-color: #f8f4e6;
+              padding: 20px;
+            text-align: center;
+            color: #973909;
+              font-weight: bold;
+          }
+          
+          header {
+            background-color: #f8f4e6;
+              padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+          }
+          
+          nav {
+            display: flex;
+            justify-content: center;
+          }
+          
+          nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: #973909;
+              font-weight: bold;
+          }
+          
+          .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 50px 0;
+            background-color: #f8f4e6;
+              overflow: hidden;
+            min-height: 100vh;
+            scroll-margin-top: 70px; /* Offset to account for fixed header */
+          }
+          
+          .section:nth-child(even) {
+            flex-direction: row-reverse;
+          }
+          
+          .section img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+          }
+          
+          .text {
+            max-width: 40%;
+            padding: 0 20px;
+            font-size: 17px;
+          }
+          
+          .map {
+            text-align: center;
+          }
+          
+          
+          @media (max-width: 768px) {
+            .section {
+              flex-direction: column;
+            }
+       .section img {
+    max-width: 100%; /* Ajuster la largeur de l'image à 100% */
+    height: auto;
+    border-radius: 10px;
+  }
+            .text {
+              max-width: 100%;
+            }
+
+
+          </style>
+            </head>
+            <body>
+            
+            
+            <header>
+            <h1>Mariage de Mathilde et Adrien</h1>
+            <nav>
+            <a href="#home">Infos pratiques</a>
+            <a href="#about">Comment venir ?</a>
+            <a href="#gallery">Où dormir ?</a>
+            <a href="#contact">Découvrir l'Aveyron</a>
+          </nav>
+          </header>
+          
+          <section id="home" class="section">
+          <div class="text" style="line-height: 1.5;" >
+          <h2 style="line-height: 1.25; color: #973909;" > Déroulé des festivités </h2>
+            <p> Tout se déroulera dans le village de Palmas (12310), entre  
+            le jardin du 99 rue du Puech (maison de la grand mère de Mathilde), 
+            la salle des fêtes et l'église du village. Ces trois lieux sont dans un rayon de 200m. </p>
+            <ul>
+             <li> <strong> La veille </strong> : buffet convivial à partir de 19h  (jardin) </li>
+             <li> <strong> La journée du 10 août </strong> &#x1F495; </li>
+             <ul>
+              <li>  10h-13h : accueil, petit-déjeuner et jeux (jardin) </li>
+              <li>  13h-16h : temps libre pour préparatifs (où vous voulez !) </li>
+              <li>  16h-17h : cérémonie (église) </li>
+              <li>  17h30-20h30 : cocktail (jardin) </li>
+              <li>  20h30-&#x1F937; : dîner puis soirée	&#x1F483;	&#x1F57A; (salle des fêtes)  </li>
+             </ul>
+             <li> <strong> Le lendemain </strong> : brunch à partir de 12h (jardin) </li>
+            </ul>
+           <p> Tout se passera dans le village de Palmas, nous pourrons donc aller d'un lieu à l'autre en marchant ! </p>
+           <p> Votre présence sera un superbe cadeau, si vous souhaitez en plus nous aider dans notre future installation, vous pouvez le faire sur ce
+          <a href="https://www.millemercismariage.com/adrienetmathilde2024/mariage-de-mathilde-c-et-adrien-l.html" target="_blank" style="text-decoration: underline; color: #973909;">site</a>. </p>
+            </div>
+            <img src="Ischia.jpg" alt="Bride and Groom" style="max-width: 550px;">
+             </section>
+        
+            <section id="about" class="section">
+            <img src="Scoot.jpg" alt="About Us" style="max-width: 550px;">
+            <div class="text" style="line-height: 1.5;">
+            <h2 style="line-height: 1.25; color: #973909;" >Comment venir ?</h2>
+            <p>Pour venir en train, la gare la plus proche est <strong> Rodez </strong> (25 minutes en voiture du lieu du mariage ; 30 minutes en bus). </p>
+            <p> Sinon, vous pouvez aller en train à <strong> Montpellier </strong>  ou <strong> Clermont-Ferrand </strong> puis de réserver un covoiturage jusqu'à Severac le château (à 20 minutes de Palmas), il y en a beaucoup. </p>
+           <p> Vous pouvez trouver les horaires des lignes de bus de la région Occitanie sur ce <a href="https://www.lio-occitanie.fr/" style="text-decoration: none;"><span style="text-decoration: underline; color: #973909;"> site</span></a>. La ligne 214 Rodez-Millau permet d'arriver au pied de Severac l'église (arrêt Grèzes) ou à Laissac, qui se trouvent à 3-4 km de Palmas. </p>
+           <p> Pour proposer ou rechercher une place de covoiturage, vous pouvez renseigner votre trajet sur ce <a href=" https://lite.framacalc.org/exu8v4v2il-a6s8" style="text-decoration: none;"><span style="text-decoration: underline; color: #973909;"> tableau</span></a>.</p>
+            
+            </div>
+            </section>
+            
+<section id="gallery" class="section">
+  <div class="text" style="line-height: 1.5;">
+    <h2 style="line-height: 1.25; color: #973909;"> Où dormir ?</h2>
+    <p>Vous pouvez regarder les gîtes ou chambres d'hôte à Palmas ou dans les villages des environs : Severac l'église, Maymac, Serre, Laissac, Cruejouls, Vimenet, Coussergues, Bertholène, etc. </p>
+   <p> On vous donne quelques idées : <a href="https://www.abritel.fr/location-vacances/p2166566?endDate=2024-08-04&adults=2&startDate=2024-07-29&CID=a_ph_6&utm_source=aff_ph&utm_medium=partner&utm_campaign=hometogo_1011l2254&utm_content=fr%3Amaisondevacances%3Acoresearch%3An%3Ac999" target="_blank" style="text-decoration: unederline; color: #973909;"><span style="text-decoration: underline;">maison 6 places</span></a> à Vimenet,  
+    <a href="http://www.gites-chambres-hotes-aveyron.com/chambres-dhotes-maymac-aveyron/" target="_blank" style="text-decoration: underline; color: #973909;"><span style="text-decoration: underline;">gîte et chambres d'hôte</span></a> à Maymac,
+      <a href="https://www.gites.fr/gites_gite-au-ruisseau-de-serres_palmas-d-aveyron_94495.htm" target="_blank" style="text-decoration: underline; color: #973909;">gîte 8 places</a> à Serre,
+    <a href="https://www.gites.fr/gites_gite-au-ruisseau-de-serres_palmas-d-aveyron_94495.htm" target="_blank" style="text-decoration: underline; color: #973909;">gîte 6 places</a> à Gagnac,
+     <a href="https://www.gitedespalanges-aubrac.fr/" target="_blank" style="text-decoration: underline; color: #973909;">gîte 4 places</a> à Severac l'église.
+    </p>
+      <p> Pour camper, vous pouvez réserver un emplacement au camping "<a href="https://www.yellohvillage.fr/camping/la_grange_de_monteillac" target="_blank" style="text-decoration: underline;"><span style="text-decoration: underline; color: #973909;">La grange de Monteillac</span></a>" à Severac l'église (à 3km du lieu du mariage). Le camping loue des vélos et
+      propose aussi des hébergements en mobil homes. </p>
+    <p>  Il y aura peut-être une option camping dans le champ voisin du lieu du coktail, mais sans sanitaires. Le site sera mis à jour si cette option se confirme 	&#x1F601; </p>
+    <p> Vous pouvez aussi trouver des hôtels à Laissac (<a href="https://www.hotel-cazes.fr/" style="text-decoration: none; color: #973909;"><span style="text-decoration: underline;">Cazes</span> </a> ou 
+    <a href="https://www.armonyhotel.com/" style="text-decoration: none; color: black;"><span style="text-decoration: underline; color: #973909;">Armony</span></a>).
+      </p>
+     
+     
+  </div>
+  <img src="buron.JPG" alt="Bride and Groom" style="max-width: 550px;">
+</section>
+
+<section id="contact" class="section">
+  <img src="ermitage.JPG" alt="Bride and Groom" style="max-width: 550px;">
+  <div class="text">
+    <h2>Découvrir l'Aveyron </h2>
+<p> Si vous envisagez de profiter de votre venue en Aveyron pour découvrir cette belle région, n'hésitez plus, c'est l'occasion ! &#x1F938;  </p>
+<p> Les causses, l'Aubrac, les gorges du Tarn, les jolis villages, il y a de quoi faire pour tous les goûts : promenades, escalade, canoë, visites de châteaux
+et forteresses (ou de ce qu'il en reste...). </p>
+<p>Eh oui l'Aveyron est une région pleine de surprises, qui ne se limitent pas à l'aligot et au roquefort ! </p>
+     </div>
+</section> 
+    
+            
+         <section id="contact" class="section">
+  <img src="Levezou.JPG" alt="Bride and Groom" style="max-width: 550px;">
+  <div class="text">
+    <h3>Idées de randonnées...</h3>
+    <ul>
+      <li>Depuis Palmas :
+        <ul>
+        <li>Palmas 	&#x2194; Vieilles Cazes,</li>
+        <li>Palmas 	&#x2194; Coussergues en passant par le pont d’Aybillac et Cousserguettes ;</li>
+        </ul>
+      </li>
+      <p> </p>
+      <li>Dans un rayon de 10 à 20 mn (en voiture) autour de Palmas :
+        <ul>
+        <li>La magnifique ferme des Bourines ; boucle d’1h30 en partant de Soulages (ferme sur la route de Gabriac),</li>
+        <li>Roquelaure : randonnée sur une crête (GR 20 en partant de Marty, A/R) - Roquelaure est un hameau charmant avec un petit château et une très belle vue sur le Lot et l’Aubrac.</li>
+        </ul>
+      </li>
+            <p> </p>
+      <li> Plus loin : </li>
+        <ul> 
+         <li> les gorges du Tarn et de la Jonte : ballade des vases sur le causse Méjean ; l’ermitage St Michel sur le causse noir ; Liaucous et les villages troglodytes Eglazine et St Marcellin sur le causse de Sauveterre, </li>
+          <li> l’Aubrac : le sommet « le signal de Mailhebiau », boucle autour de Marchastel (hébergement recommandé : La Borie de l'Aubrac), </li>
+          <li> le mont Seigne sur le Lévézou : vue sur 360 degrés. </li>
+      </ul>
+    </ul>
+        </div>
+</section>
+      
+
+ <section id="contact" class="section">
+  <img src="Roche.JPG" alt="Bride and Groom" style="max-width: 350px;">
+  <div class="text">
+      <h3>... de visites ... </h3>
+    <ul>
+      <li>Rodez : la vieille ville, la cathédrale, le musée Soulages, le musée Fenaille, le bowling (et son restaurant !),</li>
+      <li>Laissac : la foire aux bestiaux (vaches et brebis) le mardi matin (avant 10h),</li>
+      <li>Bozouls : musée Terra Memoria,</li>
+      <li>Micropolis « cité des insectes » dans le village, Saint Léons, où est né le grand entomologiste
+et naturaliste Jean Henri Fabre.</li>
+    </ul>
+
+   <h3> ... et un tas d'autres activités ! </h3>
+    <ul>
+      <li> <strong> Baignades, canoë, planches à voile et dériveurs </strong> sur les lacs du Lévézou : Pont de Salars (le plus proche) et Pareloup (plus loin et beaucoup plus grand) ou dans le Tarn et le Lot, </li>
+      <li><strong> Escalade </strong> sur les falaises de Gages (15 min depuis Palmas, hauteur maximale : 12 m), dans les gorges du Tarn et de la Jonte : couennes et grandes voies de 100 à 150 m, </li>
+      <li> <strong>Dégustation des produits aveyronnais </strong> : Roquefort et ses caves - le Roquefort le plus apprécié des Aveyronnais : Gabriel Coulet ; marchés 
+      (Laissac, Rodez, St Geniez, etc.) </li>
+    </ul>
+
+    <!-- Ajoutez d'autres informations sur les activités à découvrir -->
+  </div>
+  
+</section>
+
+  <section id="contact" class="section">
+  <img src="Conques.JPG" alt="Bride and Groom" style="max-width: 550px;">
+  <div class="text">
+    <h3>Et enfin, de beaux villages à découvrir :</h3>
+    <ul>
+      <li>Bozouls avec son fameux « trou » ; il faut descendre dans le trou et remonter de l’autre coté pour voir l’église Sainte Fauste,</li>
+      <li>Lassouts : maisons en grès rouges ; vue magnifique sur le Lot et l’Aubrac,</li>
+      <li>Sur le Lot : St Geniez, Ste Eulalie d’Olt, St Côme d’Olt, Espalion, Estaing,</li>
+      <li>Vers Séverac le château : St Grégoire, Séverac le Château (le vieux Boug avec de très vieilles maisons et son château fort en ruine), </li>
+      <li>Vers Rodez : Montrozier, Ayrinhac, Rodelle (charmant village sur un éperon rocheux entre deux vallées) ;</li>
+ 
+  <li>Plus loin :
+    <ul>
+      <li>Marcillac : maisons en grès rouge ; les vins du vallon de Marcillac</li>
+      <li>Conques : très beau village et magnifique abbaye avec les vitraux de Soulages,</li>
+      <li>Viaduc de Millau, </li>
+      <li>Roquefort et ses caves ; le Roquefort le plus apprécié des Aveyronnais : Gabriel Coulet.</li>
+    </ul>
+  </li>
+    </ul>
+    <!-- Ajoutez d'autres informations sur les activités à découvrir -->
+  </div>
+  
+</section>
+
+       
+
+
+          
+          <script>
+          // Add smooth scrolling to all links
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+          });
+          });
+          });
+          </script>
+          
+          </body>
+          </html>
+          
