@@ -51,6 +51,7 @@
           
           .section {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: space-around;
             padding: 50px 0;
@@ -71,7 +72,7 @@
           }
           
           .text {
-            max-width: 40%;
+            max-width: 45%;
             padding: 0 20px;
             font-size: 17px;
           }
@@ -80,7 +81,10 @@
             text-align: center;
           }
           
-          
+          p {
+  font-size: 1rem;
+}
+
           @media (max-width: 768px) {
             .section {
               flex-direction: column;
@@ -89,10 +93,21 @@
     max-width: 100%; /* Ajuster la largeur de l'image à 100% */
     height: auto;
     border-radius: 10px;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
             .text {
               max-width: 100%;
             }
+            
+        @media only screen and (max-width: 768px) {
+  /* Styles spécifiques pour les écrans de petite taille */
+}
+
+.container {
+  max-width: 100%;
+}
+
 
 
           </style>
@@ -151,7 +166,7 @@
   <div class="text" style="line-height: 1.5;">
     <h2 style="line-height: 1.25; color: #973909;"> Où dormir ?</h2>
     <p>Vous pouvez regarder les gîtes ou chambres d'hôte à Palmas ou dans les villages des environs : Severac l'église, Maymac, Serre, Laissac, Cruejouls, Vimenet, Coussergues, Bertholène, etc. </p>
-   <p> On vous donne quelques idées : <a href="https://www.abritel.fr/location-vacances/p2166566?endDate=2024-08-04&adults=2&startDate=2024-07-29&CID=a_ph_6&utm_source=aff_ph&utm_medium=partner&utm_campaign=hometogo_1011l2254&utm_content=fr%3Amaisondevacances%3Acoresearch%3An%3Ac999" target="_blank" style="text-decoration: unederline; color: #973909;"><span style="text-decoration: underline;">maison 6 places</span></a> à Vimenet,  
+   <p> On vous donne quelques idées : <a href="https://www.abritel.fr/location-vacances/p2166566?endDate=2024-08-04&adults=2&startDate=2024-07-29&CID=a_ph_6&utm_source=aff_ph&utm_medium=partner&utm_campaign=hometogo_1011l2254&utm_content=fr%3Amaisondevacances%3Acoresearch%3An%3Ac999" target="_blank" style="text-decoration: unederline; color: #973909;">maison 6 places</a> à Vimenet,  
     <a href="http://www.gites-chambres-hotes-aveyron.com/chambres-dhotes-maymac-aveyron/" target="_blank" style="text-decoration: underline; color: #973909;"><span style="text-decoration: underline;">gîte et chambres d'hôte</span></a> à Maymac,
       <a href="https://www.gites.fr/gites_gite-au-ruisseau-de-serres_palmas-d-aveyron_94495.htm" target="_blank" style="text-decoration: underline; color: #973909;">gîte 8 places</a> à Serre,
     <a href="https://www.gites.fr/gites_gite-au-ruisseau-de-serres_palmas-d-aveyron_94495.htm" target="_blank" style="text-decoration: underline; color: #973909;">gîte 6 places</a> à Gagnac,
